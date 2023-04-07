@@ -36,20 +36,27 @@ for j in range(0,len(li)):
               for character in data:
                   if character.isalnum():
                       new_text += character
+              li2.append(new_text)
+
             #  print(data.text)
               # print(type(data))
 
-              li2.append(new_text)
+
               # print(len(li2))
-              # print(li2)
+   # print("li2=",li2)
               # str1 = ""
                # for ele in li2:
               #     str1 += ele
               # print(str1)
         #      li2=li2.split(" , "," ")
-       li3.append(li2)
+    li3.append(li2)
+    li2=[]
 print(li3[0])
-print(len(li3))
+# print(li3[1])
+# print(li3[2])
+# print(li3[3])
+# print(li3[4])
+# print(len(li3))
 
     #    print(li2)
     # li3.append(li2)
