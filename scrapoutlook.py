@@ -38,14 +38,24 @@ for j in range(0, len(li)):
             processed_string = re.sub(r'[^\w\s]', '', original_string)
             #    print(processed_string)
             li2.append(processed_string)
+            str1 = ""
 
-    li3.append(li2)
-    li2 = []
+            # traverse in the string
+            for ele in li2:
+                str1 += ele
+
+            # return string
+           # print(str1)
+
+    li3.append(str1)
+    li2=[]
+    str1 = " "
 print(li3)
 # print(li3[0])
-# print(li3[1])
+#print(li3[1])
 # print(li3[2])
 # print(li3[3])
 # print(li3[4])
 # print(len(li3))
+# print(type(li3))
 
