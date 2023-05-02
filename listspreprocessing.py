@@ -44,6 +44,8 @@ import nltk
 # # join the stemmed words back into a string
 #     stemmed_string = " ".join(stemmed_words)
 #     print(stemmed_string)  # "the quick brown fox jump over the lazi dog"
+"""
+getting the stiphend 
 
 import re
 
@@ -61,3 +63,21 @@ for i in li6:
     max_stipend = max(stipend_values)
 
     print(max_stipend)  # Output: 25000.0
+"""
+"""
+trying to get the names of IIT
+import re
+
+# Sample string containing IIT names
+
+# Define the regex pattern to match IIT names
+regex_pattern = r"IIT\s\w+"
+
+# Find all matches of the regex pattern in the string
+for string in li5:
+
+    matches = re.findall(regex_pattern, string)
+
+# Print the matched IIT names
+    print(matches[0])
+"""
