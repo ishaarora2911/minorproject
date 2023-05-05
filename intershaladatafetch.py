@@ -9,7 +9,8 @@ response = requests.get(url, headers=headers,proxies=proxy,timeout=10)
 soup = BeautifulSoup(response.text, "html.parser")
 li=[]
 for i in soup.find_all('div', class_="container-fluid individual_internship visibilityTrackerItem"):
-     #print(i.text)
-     print(i.type)
+     print(i.text)
+     #print(i.type)
      li.append(i.text)
+
 print(li)
