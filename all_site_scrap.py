@@ -1,0 +1,6 @@
+Position=[]
+Companies=[]
+Cities=[]
+Stipend=[]
+Apply_by=[]
+Duration=[]
