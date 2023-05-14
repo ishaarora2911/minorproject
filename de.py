@@ -1,29 +1,7 @@
-import requests
-from bs4 import BeautifulSoup
-import time
-time.sleep(1)
-proxy={ 'http': 'http://135.181.137.85:3128'}
-url = "https://internship.aicte-india.org/./fetch_city.php?city=Nicobar"
-headers={"User-Agent":  "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like Gecko"}
-response = requests.get(url, headers=headers,proxies=proxy,timeout=10)
-soup = BeautifulSoup(response.text, "html.parser")
-#print(soup.text)
-headings=[]
-# for card in soup.find_all("div", class_="internship-info"):
-#
-#     for heading in card.find_all("div", class_="internship-primary-info"):
-#
-#         for k in heading.find_all("div"):
-#             for j in k.find_all("h3", class_="job-title"):
-#                 # print(heading.text)
-#                 headings.append(j.text)
-# print(headings)
-companies=[]
-for card in soup.find_all("div", class_="internship-info"):
-
-    for heading in card.find_all("div", class_="internship-primary-info"):
-
-        for k in heading.find_all("div"):
-            for company in k.find_all("h5", class_="company-name"):
-                companies.append(company)
-print(companies)
+li1=['\n            Mumbai, Maharashtra, India\n          ', '\n            Delhi, Delhi, India\n          ', '\n            Mumbai Metropolitan Region\n          ', '\n            Delhi, Delhi, India\n          ', '\n            Noida, Uttar Pradesh, India\n          ', '\n            Hyderabad, Telangana, India\n          ', '\n            Bengaluru East, Karnataka, India\n          ', '\n            Mumbai, Maharashtra, India\n          ', '\n            Bengaluru, Karnataka, India\n          ', '\n            Ahmedabad, Gujarat, India\n          ', '\n            Mumbai, Maharashtra, India\n          ', '\n            Pune, Maharashtra, India\n          ', '\n            Gurgaon, Haryana, India\n          ', '\n            Greater Kolkata Area\n          ', '\n            Gurgaon, Haryana, India\n          ', '\n            Mumbai, Maharashtra, India\n          ', '\n            Noida, Uttar Pradesh, India\n          ', '\n            Ahmedabad, Gujarat, India\n          ', '\n            Bengaluru North, Karnataka, India\n          ', '\n            Jaipur, Rajasthan, India\n          ', '\n            Bengaluru, Karnataka, India\n          ', '\n            Bengaluru East, Karnataka, India\n          ', '\n            Mumbai, Maharashtra, India\n          ', '\n            Mumbai, Maharashtra, India\n          ', '\n            Delhi, Delhi, India\n          ']
+li2=['\n         Be an early applicant\n ', '\n         Actively Hiring\n ', '\n         Actively Hiring\n ', '\n         Actively Hiring\n ', '\n         Actively Hiring\n ', '\n         Actively Hiring\n ', '\n         Be an early applicant\n ', '\n         Be an early applicant\n ', '\n         Be an early applicant\n ', '\n         Be an early applicant\n ', '\n         Actively Hiring\n ', '\n         Actively Hiring\n ', '\n         Be an early applicant\n ', '\n         Actively Hiring\n ', '\n         Be an early applicant\n ', '\n         Actively Hiring\n ', '\n         Actively Hiring\n ']
+li3=['\n            Jodo\n          ', '\n            Aam Aadmi Party\n          ', '\n            Nykaa\n          ', '\n            FabAlley\n          ', '\n            Zopper\n          ', '\n            NxtWave\n          ', '\n            Apollo Hospitals\n          ', '\n            Audi Mumbai West\n          ', '\n            Muthoot Fincorp Ltd.\n          ', '\n            Stupid Story Tellers\n          ', '\n            Apna Ghar Lifespaces LLP\n          ', '\n            InsuranceDekho\n          ', '\n            Miss Chase\n          ', '\n            Urbanic\n          ', '\n            Quantsapp\n          ', '\n            Global Honey Bee\n          ', '\n            E2M\n          ', '\n            BigHaat India\n          ', '\n            Healthy Treat\n          ', '\n            Enterpret\n          ', '\n            Third Wave Coffee\n          ', '\n            Sharekhan\n          ', '\n            Saregama India Ltd.\n          ', '\n            Limeroad.com\n          ']
+print(len(li1))
+print(len(li2))
+print(len(li3))
+#print(len(li4))

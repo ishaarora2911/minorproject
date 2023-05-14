@@ -9,21 +9,35 @@ headers={'User-Agent':"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 13_0_0; en-US; 
 response=requests.get(url , headers=headers,proxies=proxy,timeout=10)
 soup=BeautifulSoup(response.text,"html.parser")
 #print(soup.text)
-heading=[]
-cities=[]
-hiring_timing=[]
-companies=[]
-# for head in soup.find_all("span",class_="sr-only"):
+Position=[]
+Companies=[]
+Cities=[]
+Stipend=[]
+Apply_by=[]
+Duration=[]
+Hiring_actively=[]
+# for pos in soup.find_all("span",class_="sr-only"):
 #     #print(head.text)
-#     heading.append(head.text)
-# for city in soup.find_all("span",class_="job-search-card__location"):
-#     cities.append(city.text)
-# for time in soup.find_all("span",class_="result-benefits__text"):
-#     hiring_timing.append(time.text)
-#for i in soup.find_all("h4",class_="base-search-card__subtitle"):
+#     Position.append(pos.text)
+
+for city in soup.find_all("span",class_="job-search-card__location"):
+    if city.text=="":
+        city.text="-"
+    Cities.append(city.text)
+for hiring_status in soup.find_all("span",class_="result-benefits__text"):
+    if hiring_status.text=="":
+        hiring_status.text="-"
+    Hiring_actively.append(hiring_status.text)
+for pos in soup.find_all("h3",class_="base-search-card__subtitle"):
+    if pos.text=="":
+        pos.text="-"
+    Position.append(pos.text)
+
 for company in soup.find_all("a",class_="hidden-nested-link"):
-    companies.append(company.text)
-# print(heading)
-# print(cities)
-# print(hiring_timing)
-print(companies)
+    if company.text=="":
+        company.text="-"
+    Companies.append(company.text)
+print(Position)
+print(Cities)
+print(Hiring_actively)
+print(Companies)
